@@ -1,4 +1,5 @@
-ToDo List Front
+TODO LIST FRONT
+
 Durante meus estudos de TypeScript, resolvi me aventurar neste projeto de ToDo List, com o objetivo de aprimorar boas práticas de componentização, estudar mais sobre tipagem em TypeScript, Tailwind CSS e consumo de APIs.
 
 Este aplicativo permite gerenciar tarefas, incluindo criação, edição, exclusão e busca, consumindo dados de uma API desenvolvida em .NET.
@@ -13,6 +14,8 @@ React Icons para botões e ícones
 
 Axios para requisições HTTP
 
+PostgreSQL como banco de dados
+
 ⚡ Funcionalidades
 
 Adicionar novas tarefas com título, descrição e status.
@@ -26,6 +29,26 @@ Buscar tarefas pelo título.
 Interface responsiva e moderna usando Tailwind CSS.
 
 Modal reutilizáveis para criação e alteração de tarefas.
+
+📸 Screenshots
+
+<img width="1364" height="639" alt="image" src="https://github.com/user-attachments/assets/a4414539-31f1-400d-993b-b9036cb3e820" />
+
+
+<img width="1369" height="762" alt="image" src="https://github.com/user-attachments/assets/71063696-135f-448f-9dd5-a9b102fbbfee" />
+
+<img width="1167" height="810" alt="image" src="https://github.com/user-attachments/assets/8d523efb-9e15-4c7a-b1fd-d5300378351a" />
+
+<img width="1125" height="880" alt="image" src="https://github.com/user-attachments/assets/1948a0e7-ddf8-45e3-b297-2db222ffa489" />
+
+<img width="576" height="672" alt="image" src="https://github.com/user-attachments/assets/bd4ef188-bf7b-43bd-a806-ae60c1b0eafb" />
+
+<img width="1108" height="733" alt="image" src="https://github.com/user-attachments/assets/cfd0aeba-3d12-40d9-9eb0-9ca0096b22af" />
+
+<img width="1255" height="477" alt="image" src="https://github.com/user-attachments/assets/4e96f6da-c5c3-4e2f-952a-4089c6570556" />
+
+
+
 
 src/
 │
