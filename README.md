@@ -1,69 +1,115 @@
-# React + TypeScript + Vite
+ToDo List Front
+Durante meus estudos de TypeScript, resolvi me aventurar neste projeto de ToDo List, com o objetivo de aprimorar boas práticas de componentização, estudar mais sobre tipagem em TypeScript, Tailwind CSS e consumo de APIs.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este aplicativo permite gerenciar tarefas, incluindo criação, edição, exclusão e busca, consumindo dados de uma API desenvolvida em .NET.
 
-Currently, two official plugins are available:
+🖥️ Tecnologias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React 18 + TypeScript
 
-## Expanding the ESLint configuration
+Tailwind CSS para estilização
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+React Icons para botões e ícones
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Axios para requisições HTTP
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+⚡ Funcionalidades
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Adicionar novas tarefas com título, descrição e status.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Editar tarefas existentes.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Deletar tarefas.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Buscar tarefas pelo título.
+
+Interface responsiva e moderna usando Tailwind CSS.
+
+Modal reutilizáveis para criação e alteração de tarefas.
+
+src/
+│
+├─ components/
+
+│   ├─ Button.tsx
+
+│   ├─ Card.tsx
+
+│   ├─ Input.tsx
+
+│   ├─ TarefaCard.tsx
+
+│   ├─ TarefaList.tsx
+
+├─ Modal.tsx
+
+│   ├─ ModalAdd.tsx
+
+│   └─ ModalChange.tsx
+
+│
+├─ services/
+│   ├─ api.ts           // Axios configurado
+│   └─ tarefaServices.ts // Funções para CRUD
+│
+├─ types/
+│   └─ types.ts         // Tipagem TypeScript
+│
+├─ App.tsx
+└─ main.tsx
+
+⚙️ Como Rodar
+
+Clone o repositório:
+
+git clone https://github.com/Glayber16/Todo-front.git
+
+
+Instale as dependências:
+
+npm install
+
+
+Configure a URL da API no arquivo src/services/api.ts:
+
+import axios from 'axios';
+
+export const api = axios.create({
+  baseURL: 'http://localhost:5154', // URL do backend .NET
+});
+
+
+Execute o projeto:
+
+npm run dev
+
+
+O app será aberto em http://localhost:5173
+.
+
+💡 Observações
+
+Certifique-se de que o backend em .NET esteja rodando na porta correta e aceitando requisições CORS.
+
+O status das tarefas suporta apenas "Pendente" e "Finalizado".
+
+A busca por título atualiza a lista de tarefas dinamicamente conforme o usuário digita.
+
+📌 Próximos Passos / Melhorias
+
+Implementar autenticação de usuário.
+
+Adicionar notificações de tarefas pendentes.
+
+Ordenar tarefas por prioridade ou data de criação.
+
+Melhorar a experiência mobile com layout dedicado.
+
+Implementar debounce na search bar para reduzir requisições ao backend.
+
+🧑‍💻 Autor
+
+Desenvolvido por Glayberson
+
+Link do back: https://github.com/Glayber16/TodoDIO-API
+
