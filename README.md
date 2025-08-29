@@ -73,12 +73,15 @@ src/
 │
 ├─ services/
 │   ├─ api.ts           // Axios configurado
+
 │   └─ tarefaServices.ts // Funções para CRUD
 │
 ├─ types/
+
 │   └─ types.ts         // Tipagem TypeScript
 │
 ├─ App.tsx
+
 └─ main.tsx
 
 ⚙️ Como Rodar
